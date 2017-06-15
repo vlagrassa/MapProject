@@ -680,7 +680,6 @@ class Timeline extends Button {
     }
   }
   
-  @Override
   public void render() {
     drawLine();
     top.bounds.bounds[1] = bottom.posX-bottom.wid/2;//-increment;
