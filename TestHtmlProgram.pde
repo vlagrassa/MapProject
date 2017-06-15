@@ -1,8 +1,9 @@
 //processing.imageCache.add("data/Map of the Americas.png")
+/* @pjs preload="data/Map of the Americas.png"
 PImage back;
 
 void setup() {
-  back = new PImage("https://raw.githubusercontent.com/vlagrassa/MapProject/master/data/Map%20of%20the%20Americas.png")
+  back = new PImage("data/Map of the Americas.png")
   
   back.loadPixels();
   for (int i = 0; i < back.pixels.length; i++) {
