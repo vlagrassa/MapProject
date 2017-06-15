@@ -4,7 +4,7 @@ PImage back;
 
 void setup() {
   delay(5000);
-  back = new PImage("data/Map of the Americas.png");
+  back = loadImage("data/Map of the Americas.png");
  
   back.loadPixels();
   for (int i = 0; i < back.pixels.length; i++) {
