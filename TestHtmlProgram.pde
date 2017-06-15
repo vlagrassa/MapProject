@@ -3,8 +3,9 @@
 PImage back;
 
 void setup() {
-  back = new PImage("data/Map of the Americas.png")
-  
+  delay(5000);
+  back = new PImage("data/Map of the Americas.png");
+ 
   back.loadPixels();
   for (int i = 0; i < back.pixels.length; i++) {
     back.pixels[i] = color(0, 255, 0);
