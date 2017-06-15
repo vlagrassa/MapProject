@@ -3,7 +3,6 @@
 PImage back;
 
 void setup() {
-  delay(5000);
   back = loadImage("data/Map of the Americas.png");
  
   back.loadPixels();
