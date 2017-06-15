@@ -717,4 +717,16 @@ class Timeline extends Button {
     rect(beginning, posY+5, ending, posY-5);
     text(beginning +", " + ending, 425, 600);
   }
+  
+  public boolean touchingMouse() {
+    return super.touchingMouse();
+  }
+  
+  public boolean touchingCoords(int x, int y) {
+    return super.touchingCoords(x, y);
+  }
+  
+  public boolean clicked() {
+    return super.clicked();
+  }
 }
