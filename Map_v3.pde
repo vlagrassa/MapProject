@@ -394,7 +394,7 @@ static class Coordinate {
 class MapItem {
   PImage icon;
   ArrayList<PImage> pictures;
-  String location, name, displayName;
+  String location, item_name, displayName;
   int size;
   String[] fullText;
   int state; //Inactive, Icon only, Selected Icon, Menu
@@ -402,12 +402,12 @@ class MapItem {
   String link;
   HashMap<String, String> variables = new HashMap();
   
-  public MapItem(String name) {
-    location = "Map Items/" + name + "/" + name + ".txt";
-    this.name = name;
+  public MapItem(String given_name) {
+    location = "Map Items/" + item_name + "/" + item_name + ".txt";
+    this.item_name = given_name;
     fullText = loadStrings(location);
     initialize();
-    println(name + " initialized: posx=" + pos.getCoX() + "  posy=" + pos.getCoY());
+    println(item_name + " initialized: posx=" + pos.getCoX() + "  posy=" + pos.getCoY());
     size = 64;
     
   }
@@ -429,7 +429,7 @@ class MapItem {
     displayName = variables.get("Name").toString().replace("\\n", "\n");
     pos = Coordinate.initCoords(Integer.parseInt(variables.get("X")), Integer.parseInt(variables.get("Y")));
     
-    icon = loadImage("Map Items/" + name + "/Images/Icon.png");
+    icon = loadImage("Map Items/" + item_name + "/Images/Icon.png");
     
     link = "http://" + variables.get("Link");
   }
@@ -519,8 +519,8 @@ class DatedMapItem extends MapItem {
 class MovingButton extends Button {
   Bounds bounds;
   
-  public MovingButton(int x, int y, int w, int h, String name, Bounds b ) {
-    super(x, y, w, h, name);
+  public MovingButton(int x, int y, int w, int h, String given_name, Bounds b ) {
+    super(x, y, w, h, given_name);
     bounds = b;
   }
   
