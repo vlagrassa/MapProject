@@ -1,4 +1,4 @@
-/* @pjs preload="data/Map of the Americas.png"; */
+/* @pjs preload="data/Map of the USA.png"; */
 
 static int scrX; //1000 vs 1366
 static int scrY; //600 vs 768
@@ -36,7 +36,6 @@ void setup() {
   
   //  Retrieve map items from file and print  //
   mapItems = new ArrayList<MapItem>();
-  //maplist = new File("//Users/student/Documents/Processing/Map_2_0/Map Items");
   maplist = new File("data/Map Items");
   listOfItems = maplist.list();
   println((Object)maplist.listFiles());
