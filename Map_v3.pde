@@ -507,11 +507,6 @@ class DatedMapItem extends MapItem {
     endTime = Integer.parseInt(variables.get("End Date"));
   }
   
-  @Override
-  public boolean onScreen() {
-    return ((startTime <= globalEndTime) || (endTime >= globalStartTime));
-  }
-  
   public int getStart() {
     return startTime;
   }
