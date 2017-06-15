@@ -1,5 +1,5 @@
 //processing.imageCache.add("data/Map of the Americas.png")
-/* @pjs preload="data/Map of the Americas.png"
+/* @pjs preload="data/Map of the Americas.png" */
 PImage back;
 
 void setup() {
