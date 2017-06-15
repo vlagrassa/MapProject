@@ -35,7 +35,7 @@ void setup() {
   //  Retrieve map items from file and print  //
   mapItems = new ArrayList<MapItem>();
   //maplist = new File("//Users/student/Documents/Processing/Map_2_0/Map Items");
-  maplist = new File(dataPath("Map Items"));
+  maplist = new File("data/Map Items");
   listOfItems = maplist.list();
   println((Object)maplist.listFiles());
   
@@ -54,7 +54,7 @@ void setup() {
   
   //  Set up the background image  //
   imageMode(CENTER);
-  back = loadImage("Map of the USA.png");
+  back = loadImage("data/Map of the USA.png");
   winX = (back.width) / 2;
   winY = (back.height) / 2;
   backCoords = Coordinate.initCoords(winX, winY);
