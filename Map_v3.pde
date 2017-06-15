@@ -658,8 +658,8 @@ class Timeline extends Button {
   int increment;
   MovingButton top, bottom;
   
-  public Timeline(int x, int y, int w, int h, String name, int start, int end, int inc) {
-    super(x, y, w, h, name);
+  public Timeline(int x, int y, int w, int h, String timeline_name, int start, int end, int inc) {
+    super(x, y, w, h, timeline_name);
     startDate = start;
     endDate = end;
     increment = inc;
