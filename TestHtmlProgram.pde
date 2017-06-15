@@ -10,10 +10,6 @@ void setup() {
 }
 
 void draw() {
-  try {
-    background(back);
-  } catch (Exception e) {
-    background(0, 0, 255);
-  }
+  background(back);
   ellipse(mouseX, mouseY, 25, 25);
 }
