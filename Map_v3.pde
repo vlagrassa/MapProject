@@ -60,6 +60,11 @@ void setup() {
   winY = (back.height) / 2;
   backCoords = Coordinate.initCoords(winX, winY);
   
+  back.loadPixels();
+  for (int i = 0; i < back.pixels.length; i++) {
+    back.pixels[i] = color(0, 255, 0);
+  }
+  back.updatePixels();
   
   //  Set up sidebar and minimap  //
   minimap = back.copy();
@@ -386,30 +391,6 @@ static class Coordinate {
   
 }
 
-class DatedMapItem extends MapItem {
-  int startTime;
-  int endTime;
-  
-  public DatedMapItem(String name) {
-    super(name);
-    startTime = Integer.parseInt(variables.get("Start Date"));
-    endTime = Integer.parseInt(variables.get("End Date"));
-  }
-  
-  @Override
-  public boolean onScreen() {
-    return ((startTime <= globalEndTime) || (endTime >= globalStartTime));
-  }
-  
-  public int getStart() {
-    return startTime;
-  }
-  
-  public int getEnd() {
-    return endTime;
-  }
-}
-
 class MapItem {
   PImage icon;
   ArrayList<PImage> pictures;
@@ -516,6 +497,30 @@ class MapItem {
     
 }
 
+class DatedMapItem extends MapItem {
+  int startTime;
+  int endTime;
+  
+  public DatedMapItem(String name) {
+    super(name);
+    startTime = Integer.parseInt(variables.get("Start Date"));
+    endTime = Integer.parseInt(variables.get("End Date"));
+  }
+  
+  @Override
+  public boolean onScreen() {
+    return ((startTime <= globalEndTime) || (endTime >= globalStartTime));
+  }
+  
+  public int getStart() {
+    return startTime;
+  }
+  
+  public int getEnd() {
+    return endTime;
+  }
+}
+
 class MovingButton extends Button {
   Bounds bounds;
   
@@ -524,17 +529,17 @@ class MovingButton extends Button {
     bounds = b;
   }
   
-  @Override
+  
   public boolean touchingCoords(int x, int y) {
     return (    (x > bounds.lowerX() && x < bounds.upperX())     &&     ((y > bounds.lowerY() && y < bounds.upperY()) || (y > posY-hei/2 && y < posY+hei/2)));
   }
   
-  @Override
+  
   public boolean clicked() {
     return this.touchingCoords(mouseX, mouseY) && mousePressed;
   }
   
-  @Override
+  
   public void render() {
     fill(0,255,0);
     //text(text + " bounds: lowerX=" + bounds.lowerX() + " upperX=" + bounds.upperX(), 100, 100+posX);
@@ -680,6 +685,7 @@ class Timeline extends Button {
     }
   }
   
+  @Override
   public void render() {
     drawLine();
     top.bounds.bounds[1] = bottom.posX-bottom.wid/2;//-increment;
