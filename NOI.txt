@@ -1,7 +1,0 @@
-Name: Nation of\nIslam
-X: 1094
-Y: 345
-Link: projectporfiriojellyfish.weebly.com/store/p13/NOI.html
-Start Date: 1914
-End Date: 1930
-Location: Detroit, Michigan
