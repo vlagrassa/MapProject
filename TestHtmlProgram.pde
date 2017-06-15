@@ -1,4 +1,4 @@
-processing.imageCache.add("data/Map of the Americas.png")
+//processing.imageCache.add("data/Map of the Americas.png")
 PImage back;
 
 void setup() {
