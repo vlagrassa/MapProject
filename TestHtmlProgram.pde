@@ -1,3 +1,5 @@
+/* @pjs preload="data/Map of the Americas.png" */
+
 PImage back;
 
 void setup() {
