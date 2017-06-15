@@ -501,8 +501,8 @@ class DatedMapItem extends MapItem {
   int startTime;
   int endTime;
   
-  public DatedMapItem(String name) {
-    super(name);
+  public DatedMapItem(String dated_name) {
+    super(dated_name);
     startTime = Integer.parseInt(variables.get("Start Date"));
     endTime = Integer.parseInt(variables.get("End Date"));
   }
