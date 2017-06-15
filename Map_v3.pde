@@ -1,4 +1,4 @@
-/* @pjs preload="data/Map of the USA.png"; */
+/* @pjs preload="data/Map of the USA.png" */
 
 static int scrX; //1000 vs 1366
 static int scrY; //600 vs 768
