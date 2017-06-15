@@ -1,3 +1,5 @@
+/* @pjs preload="data/Map of the Americas.png"; */
+
 static int scrX; //1000 vs 1366
 static int scrY; //600 vs 768
 static int winX;
